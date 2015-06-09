@@ -1,0 +1,32 @@
+{
+  "name": "worksmith_rascal",
+  "version": "0.2.0",
+  "description": "Rascal activites for worksmith",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha --recursive tests",
+    "prepush": "npm test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/guidesmiths/worksmith_rascal.git"
+  },
+  "keywords": [
+    "workflow",
+    "salesforce"
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/guidesmiths/worksmith_rascal/issues"
+  },
+  "homepage": "https://github.com/guidesmiths/worksmith_rascal",
+  "dependencies": {
+    "debug": "^2.2.0",
+    "rascal": "^0.8.0"
+  },
+  "devDependencies": {
+    "husky": "^0.8.1",
+    "mocha": "^2.2.5",
+    "worksmith": "^0.1.5"
+  }
+}
