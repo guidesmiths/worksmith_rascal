@@ -7,6 +7,7 @@ This package contains the following activities/tasks:
 name | description
 --- | ---
 [publish](#publish-activity) | Publishes a message a rascal publication
+[receiveOne](#receiveOne-activity) | Receives a message from a rascal publication
 
 ### publish activity
 Publish as message to a rascal publication
@@ -30,6 +31,34 @@ var workflow = worksmith({task:"sequence", items : [{
     publication: 'p1',
     payload: 'test message',
     resultTo: 'messageId'
+}])
+```
+
+
+### receiveOne activity
+Receives exactly one message from a subscription within a given timeout.
+Causes an error if no message could be received.
+
+When a message is received the result is `{ message: rabbitMsg, content: parsed<message.content> }`
+
+##### params
+name | type | description
+--- | --- | ---
+broker | Rascal Broker | Will look in context.broker if not specified
+subscription | Subscription id | Rascal subscription name to receive from
+timeOut | milliseconds | amount of time to wait for a message
+options | Other subscription options (see rascal documentation)
+
+##### example
+
+```javascript
+var worksmith = require('worksmith')
+worksmith.use('rascal', require('worksmith_rascal'))
+var workflow = worksmith({task:"sequence", items : [{
+    task:'rascal/receiveOne',
+    broker: '@broker',
+    subscription: 's1',
+    resultTo: 'message'
 }])
 ```
 
