@@ -7,7 +7,7 @@ This package contains the following activities/tasks:
 name | description
 --- | ---
 [publish](#publish-activity) | Publishes a message a rascal publication
-[receiveOne](#receiveOne-activity) | Receives a message from a rascal publication
+[receiveOne](#receiveone-activity) | Receives a message from a rascal publication
 
 ### publish activity
 Publish as message to a rascal publication
