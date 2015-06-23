@@ -1,6 +1,6 @@
 {
   "name": "worksmith_rascal",
-  "version": "0.2.2",
+  "version": "0.2.3",
   "description": "Rascal activites for worksmith",
   "main": "index.js",
   "scripts": {
