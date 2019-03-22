@@ -1,4 +1,4 @@
-var _ = require('lodash')
+var defaults = require('lodash.defaults')
 
 module.exports = function(node) {
 
@@ -9,7 +9,7 @@ module.exports = function(node) {
         function execute(broker, publicationId, payload, routingKey, options, done) {
 
             broker = broker || context.broker
-            options = _.defaults({}, { routingKey: routingKey }, options)
+            options = defaults({}, { routingKey: routingKey }, options)
 
             broker.publish(publicationId, payload, options, function(err, publication) {
                 if (err) return done(err)

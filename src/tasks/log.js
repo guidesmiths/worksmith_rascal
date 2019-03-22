@@ -1,6 +1,6 @@
 'use strict'
 
-var _ = require('lodash')
+var assignIn = require('lodash.assignin')
 
 module.exports = function define(node) {
     return function build(context) {
@@ -11,7 +11,7 @@ module.exports = function define(node) {
 
             logger = logger || context.logger || console
 
-            logger[level || 'info'](message, _.extend({
+            logger[level || 'info'](message, assignIn({
                 messageId: context.message.properties.messageId,
                 routingKey: context.message.fields.routingKey
             }, data))

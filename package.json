@@ -4,7 +4,7 @@
   "description": "Rascal activites for worksmith",
   "main": "index.js",
   "scripts": {
-    "test": "mocha --recursive tests",
+    "test": "mocha --exit --recursive tests",
     "prepush": "npm test"
   },
   "repository": {
@@ -21,15 +21,14 @@
   },
   "homepage": "https://github.com/guidesmiths/worksmith_rascal",
   "dependencies": {
-    "debug": "^2.2.0",
-    "lodash": "^3.9.3",
-    "rascal": "^0.8.0"
+    "debug": "^4.1.1",
+    "lodash.assignin": "^4.2.0",
+    "lodash.defaults": "^4.2.0"
   },
   "devDependencies": {
-    "gulp": "^3.9.0",
-    "gulp-mocha": "^2.1.1",
-    "husky": "^0.8.1",
-    "mocha": "^2.2.5",
-    "worksmith": "^0.1.5"
+    "husky": "^1.3.1",
+    "mocha": "^6.0.2",
+    "rascal": "^4.2.2",
+    "worksmith": "^1.0.0"
   }
 }
