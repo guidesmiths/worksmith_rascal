@@ -9,7 +9,7 @@ module.exports = function define(node) {
         execute.annotations = { inject: ['level', 'message', 'data', 'logger'] }
 
         function execute(level, message, data, logger, done) {
-            
+
             logger = logger || context.logger || console
 
             var recovery = get(context, 'message.properties.headers.rascal.recovery')
