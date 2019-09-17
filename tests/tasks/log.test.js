@@ -7,7 +7,7 @@ var _ = require('lodash')
 
 describe('log message', () => {
 
-  it.only('should fail if no message has been received', function (done) {
+  it('should fail if no message has been received', function (done) {
 
     var workflow = worksmith({
       task: 'sequence',
@@ -25,7 +25,7 @@ describe('log message', () => {
     })
   })
 
-  it.only('should not throw any error if the message is correct and the message received has not been forwarded', function (done) {
+  it('should not throw any error if the message is correct and the message received has not been forwarded', function (done) {
 
     var workflow = worksmith({
       task: 'sequence',
@@ -57,7 +57,7 @@ describe('log message', () => {
     })
   })
 
-  it.only('should not throw any error if the message is correct', function (done) {
+  it('should not throw any error if the message is correct', function (done) {
 
     var workflow = worksmith({
       task: 'sequence',
